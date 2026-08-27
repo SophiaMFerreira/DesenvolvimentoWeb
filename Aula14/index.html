@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 14</title>
+</head>
+<body>
+    <script>
+        const URL = "https://deckofcardsapi.com/api/deck/new/shuffle/?cards=2S,3S,4S,5S,6S,7S,8S,9S,KS,QS,JS,2D,3D,4D,5D,6D,7D,8D,9D,KD,QD,JD,2C,3C,4C,5C,6C,7C,8C,9C,KC,QC,JC,2H,3H,4H,5H,6H,7H,8H,9H,KH,QH,JH" // NOVO BARAIO 
+                
+        async function iniciaJogo() {
+            const respostaF = await fetch(URL)
+            const deck = await respostaF.json()
+            
+            const respJ01 = await fetch(`https://deckofcardsapi.com/api/deck/${deck.deck_id}/pile/jogador01/add/?cards=4`)
+            const maoJ01 = await respJ01.json()     
+                
+            const div01 = document.createElement("div");
+            div01.innerHTML = `<h3>Jogador 01</h3>
+                            <img src="${maoJ01.cards[0].image}" alt="carta01">
+                            <img src="${maoJ01.cards[1].image}" alt="carta02">
+                            <img src="${maoJ01.cards[2].image}" alt="carta03">
+                            <img src="${maoJ01.cards[3].image}" alt="carta04">`
+            document.body.appendChild(div01);                  
+        }
+       
+    </script>
+</head>
+<body>
+    <button id="embaralhar" onclick="iniciaJogo()">Embaralhar</button>
+    <button id="distribuir" onclick="iniciaTruco()">Distribuir</button>
+        <p id="jogador01"></p>
+        <p id="jogador02"></p>
+        <p id="jogador03"></p>
+        <p id="jogador04"></p>
+</body>
+</html>

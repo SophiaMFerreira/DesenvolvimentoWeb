@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 10</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <!--
+        Crie um HTML com um input, um botão e um parágrafo.
+        
+        Crie um script que, ao clicar no botão verifique se existe um número entre 10 e 1000 no input, 
+        emitindo uma mensagem em uma janela de alerta e terminando caso contrário.
+        
+        Caso o input contenha um número válido (entre 10 e 1000), mostre os divisores do número informado no 
+        parágrafo, mudando a cor de fundo do input para vermelho caso o número de divisores seja maior do que 5.
+
+        DICAS:
+            a) para ler número digitado no input use a propriedade ‘value’ daquele objeto;
+            
+            b) para escrever no parágrafo, atribua à sua propriedade ‘innerHTML’
+            
+            c) para alterar a cor de fundo do input use a sua propriedade ‘style’. A propriedade ‘style’ é na realidade um objeto que reflete as propriedades CSS do objeto, 
+            mas com nomes ligeiramente diferentes, por exemplo: ‘background-color’ do css vira ‘backgroundColor’ no javascript.
+            
+            d) A é divisor de B se o resto da divisão inteira de B por A for zero. Utilize o operador ‘%’ para descobrir o resto da divisão inteira entre dois números
+    -->
+</head>
+<body>
+    <div>
+        <h1>Verificar Divisores de um valor entre 10 e 1000</h1>
+        <input type="number" max="1000" min="10" id="input">
+        <button onclick="verificarDivisores()" id="botao">Verificar Divisores</button>
+        <p id="paragrafo"></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 12</title>
+    <script src="script.js"></script>
+
+    <style>
+        ul{
+            color: #f72121;
+        }
+    </style>
+
+    <!--
+        Crie uma página com 2 inputs, um para senha e outro para confirmar a senha, e uma lista não ordenada com os seguintes itens:
+            • pelo menos 8 caracteres
+            • letras minúsculas e maiúsculas
+            • caracteres especiais
+            • senha e confirmação iguais
+
+        Todos os itens da lista devem inicialmente estarem escritos com letras vermelhas. A medida em que o usuário for digitando nos inputs, confira os
+        critérios de validação da senha, mudando a cor da letra para verde dos itens atendidos.
+
+        SUGESTÕES:
+        1) Crie uma função única associada ao evento onKeyUp dos dois inputs;
+        2) Utilize o código ASCII dos caracteres digitados 
+    -->
+</head>
+<body>
+    <div>
+        <h1>Alterar/Confirmar Senha</h1>
+
+        <label for="senha">Insira sua senha: </label>
+            <input type="text" min="8" id="senha" onkeyup="validaSenha()">
+    <br><br>
+        <label for="senha">Confirme sua senha: </label>
+            <input type="text" min="8" id="confirmaSenha" onkeyup="validaSenha()">
+
+        <ul>
+            <li id="tamanho">Pelo menos 8 caracteres</li>
+            <li id="letras">Letras minúsculas e maiúsculas</li>
+            <li id="caracteresEspeciais">Caracteres especiais</li>
+            <li id="senhaConfonfirmacao">Senha e confirmação iguais</li>
+        </ul>    
+    </div>
+</body>
+</html>

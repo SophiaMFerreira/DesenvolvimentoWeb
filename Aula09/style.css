@@ -1,0 +1,105 @@
+body{
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-content: space-evenly;
+
+}
+
+div{
+    background-color: #B2E38C;
+    height: 100px;
+    width: 100px;
+    border-radius: 10%;
+    transition-duration: 5s;
+    transition-property: transform;
+    margin: 50px;
+}
+
+/*.verso{
+    background-color: #F0803C;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+.face {
+    border-radius: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin: 0px;
+}
+
+.face--top{
+    background-color: #BDE79C;
+    transform: rotateX(90deg) translateZ(100px);
+}
+.face--right{
+    background-color: #9CDB6B;
+    transform: rotateY(90deg) translateZ(100px);
+}
+.face--left{
+    background-color: #70C530;
+    transform: rotateY(-90deg) translateZ(100px);
+}
+.face--front{
+    background-color: #4B8320;
+    transform: translateZ(100px);
+}
+.face--back{
+    background-color: #254210;
+    transform: rotateY(180deg) translateZ(100px);
+}
+.face--bottom{
+    background-color: #091004;
+    transform: rotateX(-90deg) translateZ(100px);
+}
+
+.cube {
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    height: 200px;
+
+    transform: rotateX(-20deg) rotateY(-10deg);
+    transform-style: preserve-3d;
+}
+*/
+
+
+
+
+
+#translate:hover{
+    transform: translate(0px, 20px);
+}
+
+#tranlate3d:hover{
+    transform:  perspective(250px) translate3d(50px, 50px, 5px);
+}
+
+#rotate:hover{
+    transform: rotateY(360deg);
+    transform: rotateX(360deg);;
+}
+
+#rotate3d:hover{
+    transform: rotate3d(-1, 1, 0, 360deg);
+}
+
+
+#scale{
+    transition: 5s;
+}
+#scale3d{
+    transition: 5s;
+}
+#perspective{
+    transition: 5s;
+}
+#skew{
+    transition: 5s;
+}

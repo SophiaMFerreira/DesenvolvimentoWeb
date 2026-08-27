@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        async function buscaCarta(e){
+            const url="https://deckofcardsapi.com/api/deck/3p40paa87x90/draw/?count=1"
+            const resp = await fetch(url)
+            const json = await resp.json();
+            let card = document.getElementById(card)
+            card.src = json.cards[0].image
+        }        
+    </script>
+
+</head>
+<body>
+    <form onsubmit="buscaCarta(event); return false">
+        <input type="submit">
+        <img id="card">
+    </form>
+</body>
+</html>

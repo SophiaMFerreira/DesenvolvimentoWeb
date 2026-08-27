@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 12</title>
+    <script src="script.js"></script>
+
+    <style>
+        ul{
+            color: #f72121;
+        }
+    </style>
+
+    <!--
+            Crie uma página com um input, um botão e uma lista ordenada.
+            Sempre que o usuário digitar algo no input e pressionar o botão, um script deve ser executado fazendo o seguinte:
+                1) a palavra digitada no input deve ser incluída em um array;
+                2) o array deve ser ordenado alfabeticamente e cada elemento item incluído (em ordem) na lista ordenada como um item;
+                3) o texto do input deve ser apagado;
+                4) o foco de edição deve ser movido para o input para que uma nova palavra possa ser imediatamente digitada.
+
+        DICAS:
+        a) lembre-se que o array deve ser global!
+        b) utilize o método focus() para voltar o foco de edição para o input após clicar no botão.
+    -->
+</head>
+<body>
+    <div>
+        <h1>Ordenando Palavritas</h1>
+
+        <label for="texto">Digite uma Palavra: </label>
+            <input type="text" id="texto">
+        <button id="butao"  onclick="modificaLista()">Clique</button>
+    <br><br>
+        <ol id="lista">
+        </ol>    
+    </div>
+</body>
+</html>

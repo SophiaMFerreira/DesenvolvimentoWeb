@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 03</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <h1>Hamburgueria Guloso</h1>
+    <form action="https://jkorpela.fi/cgi-bin/echo.cgi" method="post">
+        <fieldset>
+            <legend>Dados do Faminto</legend>
+                <label for="cliente">Quem está com fome?</label>
+                    <input type="text" id="cliente" name="cliente">
+                <label for="telefone">Telefone para contato:</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(00) 0000-0000">
+                <label for="endereco">Endereço da entrega:</label>
+                    <input type="text" id="endereco" name="endereco" placeholder="Rua dos Famintos, nº 0">
+        </fieldset>
+        <fieldset>
+            <legend>Pedido</legend>
+                
+                <div id="hamburgers">
+                    <h2>Hamburgers</h2>
+                    <div>
+                        <h3>Hamburger 01</h3>
+                        <img src="https://images.unsplash.com/photo-1525426996102-52becb48ee14?q=80&w=2054&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="hamburger01">
+                        <h4>Descrição</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur id exercitationem consectetur magni culpa ipsum deleniti, facilis doloribus harum asperiores.</p>
+                        
+                        <label for="quantidadeH1">Unidades</label>
+                            <input type="number" id="quantidadeH1" name="quantidadeH1" value="0" min="0" max="10">
+                    </div>
+                    <div>
+                        <h3>Hamburger 02</h3>
+                        <img src="https://images.unsplash.com/photo-1525426996102-52becb48ee14?q=80&w=2054&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="hamburger01">
+                        <h4>Descrição</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur id exercitationem consectetur magni culpa ipsum deleniti, facilis doloribus harum asperiores.</p>
+                        
+                        <label for="quantidadeH1">Unidades</label>
+                            <input type="number" id="quantidadeH2" name="quantidadeH2" value="0" min="0" max="10">
+                    </div>
+                    <div>
+                        <h3>Hamburger 03</h3>
+                        <img src="https://images.unsplash.com/photo-1525426996102-52becb48ee14?q=80&w=2054&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="hamburger01">
+                        <h4>Descrição</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur id exercitationem consectetur magni culpa ipsum deleniti, facilis doloribus harum asperiores.</p>
+                        
+                        <label for="quantidadeH3">Unidades</label>
+                            <input type="number" id="quantidadeH3" name="quantidadeH3" value="0" min="0" max="10">
+                    </div>
+                </div>
+                <div id="acompanhamentos">
+                    <h2>Acompanhamentos</h2>
+                        <div>
+                            <h3>Bebidas</h3>
+                            <img src="https://images.unsplash.com/photo-1628200558926-463e8390113d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="hamburger01">
+                            <input type="checkbox" name="aguaGas" id="aguaGas">
+                                <label for="aguaGas">Água com Gás</label>
+                            <input type="checkbox" name="aguaMin" id="aguaMin">
+                               <label for="aguaMin">Água Mineral</label>
+                            <input type="checkbox" name="coca" id="coca">
+                                <label for="coca">Cocacola</label>
+                            <input type="checkbox" name="sprite" id="sprite">
+                                <label for="sprite">Sprite</label>
+                            <input type="checkbox" name="guarana" id="guarana">
+                                <label for="guarana">Guaraná</label>
+                            <input type="checkbox" name="suco" id="suco">  
+                                <label for="suco">Suco</label>
+                        </div>
+                        <div>
+                            <h3>Molho</h3>
+                            <input type="radio" name="molho" id="maionese">
+                                <label for="maionese">Maionese</label>
+                            <input type="radio" name="molho" id="ketchup">
+                               <label for="ketchup">Ketchup</label>
+                            <input type="radio" name="molho" id="mostarda">
+                                <label for="mostarda">Mostarda</label>
+                            <input type="radio" name="molho" id="barbecue">
+                                <label for="barbecue">Barbecue</label>
+                            <input type="radio" name="molho" id="especial">
+                                <label for="especial">Especial</label>
+                        </div>
+                </div>
+        </fieldset>
+        <fieldset>
+            <legend>Pagamento</legend>
+            <select name="pagamento" id="pagamento">
+                <option value="0" selected disabled>Forma de Pagamento</option>
+                <option value="pix">PIX</option>
+                <option value="cartaoCredito">Cartão de Crédito</option>
+                <option value="cartaoDebito">Cartão de Débito</option>
+                <option value="dinheiro">Dinheiro</option>
+            </select>
+
+            <h3>Informações adcionais ou recado</h3>
+            <textarea name="infoAdd" id="infoAdd" cols="100" rows="5"></textarea>
+            <input type="checkbox" name="recado" id="recado">  
+                <label for="recado">Recado</label>
+        </fieldset>
+        <input type="submit" value="Confirmar Pedido">
+        <input type="reset" value="Limpar">
+    </form>
+</body>
+</html>

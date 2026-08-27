@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 11</title>
+    <script src="script.js"></script>
+    <style>
+        input {
+            background-color: #ff0000d7;
+        }
+    </style>
+
+    <!--
+        Crie um HTML com dois input’s, um botão e dois parágrafos.
+
+        A cor de fundo inicial dos inputs deve ser vermelho. Ao digitarmos um valor maior que zero no input,
+        a cor de fundo deve trocar para verde, assim que o número for digitado.
+
+        Quando dois números maiores que zero existirem nos inputs, mostre em um dos parágrafos o resultado do
+        produto desses dois números. Se algum input não possuir um valor valido, a mensagem “Informe números 
+        maiores do que zero” deve aparecer nesse parágrafo.
+
+        Inicialmente e quando não existirem valores nos inputs, o botão deve estar  desabilitado.   
+        Quando existirem dois valores, ele deve ser habilitado e se clicado deve acumular o valor do produto 
+        dos valores dos inputs, mostrar no segundo parágrafo, e apagar os valores digitados nos inputs.
+
+        Exemplo de operação:
+            - digito 2 em um input: cor de fundo muda para verde;
+            - digito 5 no outro input: cor de fundo muda para verde, aparece 10 no primeiro parágrafo, botão é 
+              habilitado;
+            - clico no botão: aparece 10 no segundo parágrafo, botão é desabilitado, inputs ficam em branco 
+              com fundo vermelho;
+            - digito 3 e 4 nos inputs: aparece “12” (3x4) no primeiro parágrafo;
+            - clico no botão: aparece “22” (10+12) no segundo parágrafo;
+            - digito 2 e 7 nos inputs: aparece “14” (2x7) no primeiro parágrafo;
+            - clico no botão: aparece “36” (10+12+14) no segundo parágrafo;
+
+            DICAS:
+            a) os eventos onKeyUp dos inputs e onClick do botão serão úteis;
+            b) as propriedades “value” e “style” dos inputs e a propriedade “disabled” do botão e a 
+                 “innerHTML” dos parágrafos serão úteis;
+            c) para essa tarefa você deverá acumular os produtos das parcelas informadas, portanto, precisará 
+            utilizar uma variável global
+    -->
+</head>
+<body>
+    <div>
+    <div>
+        <input type="number" id="input1" onkeyup="verificaNatural()">
+        <input type="number" id="input2" onkeyup="verificaNatural()">
+        <p id="produto">Produto: </p>        
+        <button onclick="acumula(verificaNatural())" disabled id="botao">Acumular</button>
+        <p id="acumulado"></p>
+    </div>
+</body>
+</html>
